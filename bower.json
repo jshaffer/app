@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jshaffer/app",
+  "authors": [
+    "Joel Shaffer <joel.shaffer@gmail.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/www/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.20",
+    "dojo": "~1.10.4",
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3",
+    "backbone": "~1.2.2",
+    "handlebars": "~3.0.3"
+  }
+}
