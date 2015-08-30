@@ -3,8 +3,14 @@ module.exports = function(config) {
 	var http = require("http"),
 		express = require("express"),
 		app = express(),
+		mysql = require("mysql"),
+		db = require("./database")(mysql),
 		bodyParser = require("body-parser"),
 		contentFolders = config.httpServer.contentFolders;
+
+	if (!db.testConnection()) {
+		return;
+	}
 
 	app.use("/css", express.static(contentFolders.cssFolder, {
 		setHeaders: function(res, filePath) {
